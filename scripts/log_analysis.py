@@ -20,7 +20,7 @@ def count_requests_per_ip(log_file):
         with open(log_file, 'r') as file:
             for line in file:
                 try:
-                    ip = line.split()[0]  # Extract IP address
+                    ip = line.split()[0]  # Extracting IP address
                     ip_counter[ip] += 1
                 except IndexError:
                     print(f"Skipping malformed line: {line.strip()}")
@@ -137,24 +137,31 @@ def display_results(ip_requests, most_frequent, suspicious_activities):
         most_frequent (tuple): Most accessed endpoint and its count.
         suspicious_activities (list): List of tuples with IP addresses and failed login counts.
     """
-    # Display IP requests
-    print("\nRequests per IP:")
-    print("IP Address           Request Count")
-    for ip, count in ip_requests:
-        print(f"{ip:20}{count}")
-
-    # Display Most Frequent Endpoint
-    print("\nMost Frequently Accessed Endpoint:")
-    print(f"{most_frequent[0]} (Accessed {most_frequent[1]} times)")
-
-    # Display Suspicious Activity
-    if suspicious_activities:
-        print("\nSuspicious Activity Detected:")
-        print("IP Address           Failed Login Attempts")
-        for ip, count in suspicious_activities:
+    try:
+        # Display IP requests
+        print("\nRequests per IP:")
+        print("IP Address           Request Count")
+        for ip, count in ip_requests:
             print(f"{ip:20}{count}")
-    else:
-        print("\nNo suspicious activity detected.\n")
+
+        # Display Most Frequent Endpoint
+        print("\nMost Frequently Accessed Endpoint:")
+        if most_frequent[0] != "N/A":
+            print(f"{most_frequent[0]} (Accessed {most_frequent[1]} times)")
+        else:
+            print("No endpoints accessed.")
+
+        # Display Suspicious Activity
+        if suspicious_activities:
+            print("\nSuspicious Activity Detected:")
+            print("IP Address           Failed Login Attempts")
+            for ip, count in suspicious_activities:
+                print(f"{ip:20}{count}")
+        else:
+            print("\nNo suspicious activity detected.\n")
+
+    except Exception as e:
+        print(f"Error while displaying results: {e}")
 
 
 # Main function for argument parsing and execution

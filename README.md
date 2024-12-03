@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The **Log Analysis Script** is a tool designed to efficiently process and analyze log files, extracting meaningful insights and presenting the results in a user-friendly format. This project is part of the **Log Analysis Assignment** for the **VRV Organization**, aimed at creating a streamlined approach to log data processing and reporting. 
+The **Log Analysis Script** is a tool designed to efficiently process and analyze log files, extracting meaningful insights and presenting the results in a user-friendly format. This project is part of the **Log Analysis Assignment** for the **VRV Security Organization**, aimed at creating a streamlined approach to log data processing and reporting. 
 
 ---
 
@@ -96,7 +96,7 @@ After running the script, the processed results will be saved in the `results/` 
 ## Project Structure:
 
 ```
-vrv-log-analysis/
+Log-Analysis-Script/
 ├── data/                    # Folder to place raw log files
 ├── results/                 # Folder for saving results
 ├── environment.yml          # Conda environment configuration file
@@ -121,5 +121,5 @@ Ensure your log files follow a general format, such as:
 
 ## Acknowledgements
 
-This project is part of the **Log Analysis Assignment** for **VRV Organization**. Thanks to the team for providing the requirements and allowing the development of this tool.
+This project is part of the **Log Analysis Assignment** for **VRV Security Organization**. Thanks to the team for providing the requirements and allowing the development of this tool.
 ```
