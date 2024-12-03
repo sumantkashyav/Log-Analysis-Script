@@ -41,8 +41,8 @@ To set up the necessary environment, you can use the provided `environment.yml` 
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-repo/vrv-log-analysis.git
-cd vrv-log-analysis
+git clone https://github.com/sumantkashyav/Log-Analysis-Script.git
+cd Log-Analysis-Script
 ```
 
 ### Step 2: Set Up the Environment
@@ -113,8 +113,8 @@ vrv-log-analysis/
 Ensure your log files follow a general format, such as:
 
 ```
-[2024-12-03 10:00:00] INFO: User logged in - UserID: 12345
-[2024-12-03 10:05:00] ERROR: Database connection failed
+192.168.1.1 - - [03/Dec/2024:10:12:43 +0000] "GET /dashboard HTTP/1.1" 200 1024
+203.0.113.5 - - [03/Dec/2024:10:12:44 +0000] "POST /login HTTP/1.1" 401 128 "Invalid credentials"
 ```
 
 ---
